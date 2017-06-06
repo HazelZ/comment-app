@@ -69,17 +69,17 @@ body {
 .comment-wrapper{
 	background-color: #fff;
 	border:1px solid #eee;
-	padding:20px;
 	font-family: '微软正黑';
+	padding:0 10px;
 }
 /*评论组件*/
 .comment{
-	padding-bottom: 10px;
+	/*padding: 10px;*/
 	margin-bottom: 10px;
 	border-bottom: 1px solid #eee;
 	display: flex;
 	min-height: 50px;
-		font-size:14px;
+	font-size:14px;
 }
 .comment .comment-user{
 	flex-shrink:0;
