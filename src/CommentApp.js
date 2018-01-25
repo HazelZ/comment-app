@@ -1,13 +1,21 @@
-import React, {Component} from 'react';
+import React, {Component,PropTypes} from 'react';
 import CommentInput from './CommentInput';
 import CommentList from './CommentList';
+// import PropTypes from './prop-types';
 
 class CommentApp extends Component{
+	static childContextTypes = {
+		themeColor:PropTypes.string
+	}
 	constructor(){
 		super();
 		this.state={
-			comments:[]
+			comments:[],
+			themeColor:'red'
 		}
+	}
+	getChildContext(){
+		return { themeColor:this.state.themeColor }
 	}
 	handleSubmitComment(comment){
 		if(!comment) return;
